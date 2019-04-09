@@ -1,0 +1,11 @@
+.card{
+    background: rgb(223, 202, 13);
+
+}
+.card-body{
+    background:rgb(61, 58, 226) ;
+}
+.card-title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}

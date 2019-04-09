@@ -1,0 +1,65 @@
+
+
+
+
+<!-- 
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger">
+  <a class="navbar-brand "  routerLink="/">{{ AppTitle}} </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+      <ul class="navbar-nav ml-5  ">
+
+          <li class="nav-item active ml-5 ">
+              <a class="nav-link" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item active ml-5">
+              <a class="nav-link " routerLink="Package"> Package </a>
+          </li>
+          
+          <li class="nav-item active  ml-5 ">
+              <a class="nav-link" (click)="onLogout()">Logout </a>
+          </li>
+          <li class="nav-item active ml-5 ">
+              <a class="nav-link" routerLink="Login"> Login </a>
+          </li>
+          <li class="nav-item active  ml-5">
+              <a  routerLink="register" class="nav-link" > Register </a>
+          </li>
+
+      </ul>
+
+  </div>
+</nav> -->
+
+<nav class ="navbar navbar-expand-md navbar-dark bg-dark">
+  <div><a  class="navbar-brand"routerLink="/" class="nav-link"> Home</a></div>
+  
+  <ul class="navbar-nav">
+     
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/Package" class="nav-link"> Package</a></li>
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/Register" class="nav-link"> Register</a></li>
+    <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="login" class="nav-link">Login</a></li>
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/LogOut" class="nav-link">LogOut</a></li>
+  
+  </ul>
+    </nav>
+
+
+  
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="rounded mx-auto d-block  w-25 m-3" src="../../assets/img/fork-play1.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="rounded mx-auto d-block  w-25 m-3" src="../../assets/img/forkk.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="rounded mx-auto d-block  w-25 m-3" src="../../assets/img/fork-play1.jpg" alt="Third slide">
+    </div>
+  </div>
+</div> 

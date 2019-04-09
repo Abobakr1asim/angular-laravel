@@ -1,0 +1,49 @@
+ <div class="container   text-light">
+    <div class="row text-center">
+        <div class="col-md-8 offset-md-2">
+            <h2>Login</h2>
+            <form  #f="ngForm" (ngSubmit)="onSubmit()" >
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel"
+                          placeholder="Email" required email />
+                    <div  class="alert alert-danger"  *ngIf="!email.valid && (email.dirty || email.touched)"  >
+                        <div>Email is required</div>
+                        <div>Email must be a valid email address</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" [(ngModel)]="model.password"
+                        #password="ngModel"  required
+                        minlength="6" placeholder="Password" />
+                    <div class="alert alert-danger"  *ngIf="!password.valid && (password.dirty || password.touched)"  >
+                        <div>Password is required </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button [disabled]="!f.valid" type="submit"  class="btn btn-primary"  (click)=checkLogin()> Login </button>
+
+                    <a class="btn-link"  href="register" class="btn btn-link">Register</a>
+                   
+                    <i><a class="nav-item nav-link"href="https://www.facebook.com"> <i class="fa fa-facebook-square"></i></a></i>
+                    <i> <a class="nav-item nav-link"href="https://www.googel.com"> <i class="fa fa-google" ></i></a></i>
+                  
+                   
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="container">
+    <div>
+      User Name : <input type="email" name="email" [(ngModel)]="email">
+      Password : <input type="password" name="password" [(ngModel)]="password">
+    </div>
+    <button (click)=checkLogin() class="btn btn-success">
+      Login
+    </button>
+  </div> -->
